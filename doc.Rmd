@@ -1,0 +1,127 @@
+---
+title: "FlexTreat"
+author: "Wolfgang Seis"
+date: "3 11 2021"
+output: word_document
+---
+---
+
+- [ ]  Log removal management als Ergänzung der Endproduktkontrolle
+    - genauso wichtig für landwirtschafltiche Bewässerung, oder ein bisschen egal?
+    - wo genau is der Übergabepunkt (Ausgang Klärwerk?, Ausgang Zwischenspeicher?)
+    - Rolle der Zeit
+- [ ]  Zusammenfassung existierender Literatur
+- [ ]  Zusammenfassung der europäischen Richtlinie
+- [ ]  Challenge Tests
+- [ ]  Statistische Simulationen vor dem Hintergund der exisiterenden Richtlinie
+- [ ]  Unsicherheit verschiedener Messmethoden für verschiedene Parameter.
+- [ ]  Empfehlungen wie man es letztendlich machen soll
+
+- Hintergrund LOG Removal
+- Gesetzlicher Hinterrund
+- Theoretischer Hintergrund
+- Praxishinweise
+    - Probenahme
+    - Auswertung Daten
+    - Umgang mit Bestimmungsgrenzen
+- Praxisbeispiele
+    - Projekt FlexTreat
+    - Testfall Murcia
+- Addition LOG-Credits in Tools inkl. Empfehlung zu Anzahl Probenahme
+
+Fragen:
+
+- Abstimmung PN-Kampagnen in BS und anderen Standorten
+- Nutzung Analytikbudget für Tagesgänge
+- Angebote MiBi einholen (UCL Edemissen, Agro-Lab, Nähe/Transport/Kosten)
+- Stichproben/Mischproben
+- Desinfektion Probennehmer
+- Vorgehen LOG-Validierung außerhalb der EU ? (USA)
+- Regina à Tagesgänge MiBi
+- Wen noch Fragen:
+    - UBA - Szewzyk
+
+Statistical artifact because inflow concentration too low.
+
+Mischproben stichproben
+
+Neuauswertung Datensatz Demoware.
+
+# Aufgaben und Zielstellung
+
+Ziel dieser Richtlinien ist es den Betreibern und Planern von Anlangen zur Wasserwiederverwendung praktische Hilfestellungen an die Hand zu geben, die bei der Validierung der Reinigungsziele lauf Reuseverordnung einzuhalten sind.
+
+# Hintergrund
+
+Vor dem Hintergrund wachsender Wasserknappheit und der Realität, das kommunales Abwasser bereits vielorts wiederverwendet wird hat die Europäische Kommission die Richtlinie XYZ erlassen. In dieser Richtlinie werden einheitliche Anforderungen an die mikrobiologische Qualität des Bewässserungswassers sowie Anforderung an die Leistungfähigkeit von Abwasserbehandlungsanlagen gestellt.
+
+## Anforderungen der europäische Reuse Richtlinie
+
+### Routinemonitoring
+
+### Validierungmonitoring
+
+ 
+
+> Die Überwachung zur Validierung ist vor der Inbetriebnahme einer neuen Aufbereitungseinrichtung durchzuführen. Aufbereitungseinrichtungen, die am 25. Juni 2020 bereits in Betrieb sind und die Qualitätsanforderungen für aufbereitetes Wasser gemäß Buchstabe a Tabelle 2 erfüllen, sind von dieser Verpflichtung zur Überwachung zur Validierung freigestellt.
+> 
+
+> Die Überwachung zur Validierung ist jedoch bei jeder Modernisierung der Ausstattung sowie bei jedem Einsatz neuer Ausstattung oder neuer Verfahren durchzuführen.
+> 
+
+> Die Überwachung zur Validierung wird für die strengste Güteklasse von aufbereitetem Wasser, d. h. Güteklasse A, durchgeführt, um festzustellen, ob die Leistungsziele (log10-Reduktion) eingehalten werden. Die Überwachung zur Validierung umfasst die Überwachung der Indikator-Mikroorganismen für jede Gruppe von Pathogenen, nämlich Bakterien, Viren und Protozoen. Die ausgewählten Indikator-Mikroorganismen sind: E. coli für pathogene Bakterien, f-spezifische Coliphagen, somatische Coliphagen oder Coliphagen für pathogene Viren und Clostridium perfringens-Sporen oder sporenbildende sulfatreduzierende Bakterien für Protozoen. Die Leistungsziele (log10-Reduktion) für die Überwachung zur Validierung der ausgewählten 
+Indikator-Mikroorganismen sind in Tabelle 4 festgelegt und müssen unter Berücksichtigung der Konzentrationen im Rohabwasser, das in die kommunale Abwasserbehandlungsanlage eingeleitet wird, an der Stelle der Einhaltung eingehalten werden. Mindestens 90 % der Validierungsproben müssen die Leistungsziele erreichen oder übersteigen.
+> 
+
+> Wenn ein biologischer Indikator nicht in ausreichender Menge im Rohabwasser vorhanden ist, um die log10-Reduktion zu erreichen, bedeutet das Fehlen eines solchen biologischen Indikators im aufbereiteten Wasser, dass die Validierungsanforderungen eingehalten werden. Die Einhaltung des Leistungszieles kann durch analytische Kontrolle, durch Addition der Leistung, die den einzelnen Behandlungsschritten auf der Grundlage wissenschaftlicher Erkenntnisse für etablierte Standardprozesse wie veröffentlichte Daten von Testberichten oder Fallstudien zuerkannt wird, ermittelt werden, oder in einem Labor unter kontrollierten Testbedingungen für eine innovative Behandlung getestet werden.
+> 
+
+Die Analysemethoden für die Überwachung werden gemäß der Norm EN ISO/IEC-17025 oder anderen nationalen oder internationalen Normen, die eine gleichwertige Qualität gewährleisten, 
+validiert und dokumentiert.
+
+---
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e9db25f-2538-4f3d-93ce-243aafec731c/Untitled.png)
+
+## Statistischer Hintergrund
+
+1. Log-Reduktion als Rate zwischen Zulauf und Abalufkonzentration
+
+$$E(X) = \frac{p}{p+q} $$
+
+$$SD=\sqrt{\frac{pq}{(p+q+1)(p+q)^2}}$$
+
+1. Wieviele Stichproben brauche ich?
+
+Gesucht wird ein Rate der Werte die größer sind als ein bestimmter Zielwert. Im konkreten Fall soll die Rate der berechneten Logreduktionen größer sein als 90%. Um der statistischen Unsicherheit Rechnung zu tragen, soll die berechnete Rate statistische signifikant größer sein als 90%., sodass P(p > 0.9) > 0.95 und P(p < 0.9) < 0.05 (p-Wert).
+
+Die Anzahl der Werte die Zielwert überschreiten müssen, damit die Rate von >0.9 statistisch signifikant nachgewiesen ist, hängt von der Anzahl an Werten ab die den Wert nicht erreichen, da mit jedem *Misserfolg* die Anzahl der *Erfolge* die *Misserfolge* wieder ausgleichen müssen.
+
+![beta_illustration.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b5da56d5-9c39-4e62-bd14-c7c71dbc9649/beta_illustration.png)
+
+Die folgende Funktion in der Programmiersprache R gibt in Abhängikeit der *Misserfolge (nfailure)* und der *Zielrate (target)* und  die Anzahl der notwendigen *Erfolge* (LRV Werte über dem Zielwert) zurück die notwendig sind damit die geschätzte Rate signifikant größer ist als die Zielrate. 
+
+```r
+get_sample_size <- function(target = 0.9, nfailure){
+  
+  x = 1
+  
+  while(1-pbeta(target, x, nfailure) < 0.95){
+    x = x + 1
+
+  }
+  return(x)
+}
+```
+
+Plottet man Funktionswerte gegen den Wertebereich von 1 bis 25 Misserfolge (A-priori Verteilung Beta ( 1 , 1 ) ), sieht man das mindestens 29 Erfolge notwendig sind, damit ein Signifikanzniveau von p < 0.05 erreicht werden kann.  
+
+![beta_samples.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14964915-743f-4875-a99d-330dd987750d/beta_samples.png)
+
+## Berechnung von LRV-Werten
+
+### QMRASpot
+
+## Handlungempfehlung
+
+[L_2020177DE.01003201.xml](https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32020R0741&from=DE)
